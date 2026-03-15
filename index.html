@@ -5,12 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Матвей | 22 · Приглашение</title>
-  <meta name="description" content="Приглашение на 22-летие Матвея — 21 марта, 18:00, Карасики. Дресс-код: Cozy & Warm (Загородный стиль)." />
-  
-  <!-- Open Graph / Social Media -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Матвей | 22 · Приглашение" />
-  <meta property="og:description" content="Приглашение на 22-летие Матвея — 21 марта, 18:00, Карасики. Дресс-код: Cozy & Warm (Загородный стиль)." />
+  <meta name="description" content="Приглашение на 22-летие Матвея — 21 марта, 18:00, Карасики. Cozy & Warm Evening." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -277,11 +272,11 @@
         чтобы я успел подготовить всё как следует.
       </p>
 
-      <form id="rsvp-form" class="rsvp-form reveal" novalidate autocomplete="off">
+      <form id="rsvp-form" class="rsvp-form reveal" novalidate>
         <div class="form-row">
           <div class="form-group">
-            <label for="guest_id">Имя</label>
-            <input type="text" id="guest_id" name="guest_id" placeholder="Твоё имя" required autocomplete="new-password" />
+            <label for="rsvp-name">Имя</label>
+            <input type="text" id="rsvp-name" name="name" placeholder="Твоё имя" required autocomplete="name" />
             <span class="form-error" id="err-name"></span>
           </div>
         </div>
@@ -308,7 +303,7 @@
         <div class="form-row">
           <div class="form-group">
             <label for="rsvp-comment">Комментарий (необязательно)</label>
-            <textarea id="rsvp-comment" name="comment" placeholder="Пожелание или вопрос..." rows="1"></textarea>
+            <textarea id="rsvp-comment" name="comment" placeholder="Пожелание или вопрос..." rows="3"></textarea>
           </div>
         </div>
 
@@ -324,7 +319,7 @@
         <h3>Получено!</h3>
         <p id="rsvp-success-msg">Ответ записан, жду на празднике!</p>
         <button class="mood-btn" id="mood-btn">
-          <span>Поднять настроение? ✨</span>
+          <span>Поднять настроение? <br> Нажми на меня ✨</span>
         </button>
       </div>
     </div>
@@ -333,7 +328,7 @@
   <!-- ─────────────────────────────── FOOTER ─────────────────────────────── -->
   <footer id="footer">
     <div class="footer-ornament">✦</div>
-    <p class="footer-text">Матвей · XXII · 21.03.2026</p>
+    <p class="footer-text">Матвей · XXII · Др у меня если что 16 марта :))</p>
     <p class="footer-sub">С уважением ко времени и к тем, кто рядом</p>
   </footer>
 

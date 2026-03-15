@@ -198,7 +198,7 @@ const RSVP_ENDPOINT =
     e.preventDefault();
 
     // ── Validation ──
-    const nameEl = document.getElementById("rsvp-name");
+    const nameEl = document.getElementById("guest_id");
     const commentEl = document.getElementById("rsvp-comment");
     const errName = document.getElementById("err-name");
     const errAtt = document.getElementById("err-att");

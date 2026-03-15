@@ -2,20 +2,20 @@
    DESIGN TOKENS
 ================================================================ */
 :root {
-  --ivory: #FDFCF0;
-  --ivory-warm: #F5F0E8;
-  --navy: #1B263B;
+  --ivory: #fdfcf0;
+  --ivory-warm: #f5f0e8;
+  --navy: #1b263b;
   --navy-light: #263547;
-  --gold: #D4AF37;
-  --gold-light: #E8CF6A;
-  --gold-muted: #9E8230;
-  --charcoal: #2C2C2C;
-  --text-muted: #6B6656;
+  --gold: #d4af37;
+  --gold-light: #e8cf6a;
+  --gold-muted: #9e8230;
+  --charcoal: #2c2c2c;
+  --text-muted: #6b6656;
   --border: rgba(212, 175, 55, 0.25);
   --border-navy: rgba(27, 38, 59, 0.15);
 
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'Montserrat', system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Montserrat", system-ui, sans-serif;
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
@@ -97,7 +97,7 @@ body {
 }
 
 .mood-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: var(--gold);
@@ -129,7 +129,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.8s var(--ease-out), visibility 0.8s;
+  transition:
+    opacity 0.8s var(--ease-out),
+    visibility 0.8s;
 }
 
 #preloader.hidden {
@@ -184,7 +186,9 @@ body {
 .reveal {
   opacity: 0;
   transform: translateY(32px);
-  transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
+  transition:
+    opacity 0.9s var(--ease-out),
+    transform 0.9s var(--ease-out);
 }
 
 .reveal.visible {
@@ -243,12 +247,16 @@ body {
 
 /* Animated gradient orbs */
 #hero::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 70vmax;
   height: 70vmax;
   border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(212, 175, 55, 0.08) 0%, transparent 65%);
+  background: radial-gradient(
+    ellipse,
+    rgba(212, 175, 55, 0.08) 0%,
+    transparent 65%
+  );
   top: -20vmax;
   right: -20vmax;
   animation: orbDrift 14s ease-in-out infinite alternate;
@@ -256,12 +264,16 @@ body {
 }
 
 #hero::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 50vmax;
   height: 50vmax;
   border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(212, 175, 55, 0.05) 0%, transparent 65%);
+  background: radial-gradient(
+    ellipse,
+    rgba(212, 175, 55, 0.05) 0%,
+    transparent 65%
+  );
   bottom: -10vmax;
   left: -10vmax;
   animation: orbDrift 18s ease-in-out infinite alternate-reverse;
@@ -329,7 +341,7 @@ body {
 
 .hero-subtitle {
   font-family: var(--font-serif);
-  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+  font-size: clamp(1.15rem, 3.2vw, 1.5rem);
   font-weight: 300;
   font-style: italic;
   color: rgba(253, 252, 240, 0.55);
@@ -368,12 +380,14 @@ body {
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  transition: color 0.4s var(--ease-out), border-color 0.4s;
+  transition:
+    color 0.4s var(--ease-out),
+    border-color 0.4s;
   transition-delay: 0.6s;
 }
 
 .hero-cta::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: var(--gold);
@@ -413,7 +427,6 @@ body {
 }
 
 @keyframes scrollPulse {
-
   0%,
   100% {
     opacity: 0;
@@ -512,12 +525,14 @@ section {
   text-align: center;
   position: relative;
   overflow: hidden;
-  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+  transition:
+    transform 0.4s var(--ease-out),
+    box-shadow 0.4s var(--ease-out);
   transition-delay: calc(var(--i, 0) * 0.1s);
 }
 
 .detail-card::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -675,7 +690,9 @@ section {
   border-radius: 50%;
   border: 1px solid rgba(27, 38, 59, 0.12);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.35s var(--ease-out), box-shadow 0.35s;
+  transition:
+    transform 0.35s var(--ease-out),
+    box-shadow 0.35s;
 }
 
 .palette-swatch:hover {
@@ -710,7 +727,7 @@ section {
 }
 
 .dresscode-tips li::before {
-  content: '—';
+  content: "—";
   position: absolute;
   left: 0;
   color: var(--gold);
@@ -838,7 +855,7 @@ section {
 }
 
 .radio-box::after {
-  content: '';
+  content: "";
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -847,11 +864,11 @@ section {
   transition: transform 0.3s var(--ease-out);
 }
 
-.radio-option input[type="radio"]:checked~.radio-box {
+.radio-option input[type="radio"]:checked ~ .radio-box {
   border-color: var(--gold);
 }
 
-.radio-option input[type="radio"]:checked~.radio-box::after {
+.radio-option input[type="radio"]:checked ~ .radio-box::after {
   transform: scale(1);
 }
 
@@ -878,7 +895,7 @@ section {
 }
 
 .rsvp-submit::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: var(--gold);
@@ -987,7 +1004,6 @@ section {
 }
 
 @keyframes ornamentPulse {
-
   0%,
   100% {
     opacity: 0.5;

@@ -781,6 +781,9 @@ section {
   outline: none;
   transition: border-color 0.35s;
   resize: none;
+}
+
+.form-group select {
   appearance: none;
   -webkit-appearance: none;
   cursor: pointer;

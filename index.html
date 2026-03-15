@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Матвей | 22 · Приглашение</title>
+  <meta name="description" content="Приглашение на 22-летие Матвея — 21 марта, 18:00, Карасики. Old Money Evening." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Three.js + GSAP (локальные файлы) -->
+  <script src="libs/three.min.js"></script>
+  <script src="libs/gsap.min.js"></script>
+  <script src="libs/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <span class="preloader-roman">XXII</span>
+      <div class="preloader-line"></div>
+    </div>
+  </div>
+
+  <!-- Particles / ambient background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- 3D Coin overlay -->
+  <canvas id="coin-canvas"></canvas>
+
+  <!-- ─────────────────────────────── HERO ─────────────────────────────── -->
+  <section id="hero">
+    <div class="hero-ornament top-left"></div>
+    <div class="hero-ornament top-right"></div>
+    <div class="hero-ornament bottom-left"></div>
+    <div class="hero-ornament bottom-right"></div>
+
+    <div class="hero-content" id="hero-content">
+      <p class="hero-eyebrow reveal">— Частное приглашение —</p>
+      <h1 class="hero-title reveal">
+        <span class="hero-name">Матвей</span>
+        <span class="hero-divider">·</span>
+        <span class="hero-age">XXII</span>
+      </h1>
+      <p class="hero-subtitle reveal">22 года достоинства, стиля и настоящего тепла</p>
+      <div class="hero-rule reveal"></div>
+      <p class="hero-date reveal">21 МАРТА / 18:00</p>
+      <a href="#details" class="hero-cta reveal" id="hero-cta">Открыть приглашение</a>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────── DETAILS ─────────────────────────────── -->
+  <section id="details">
+    <div class="section-container">
+      <div class="section-label reveal">Детали вечера</div>
+
+      <div class="details-grid">
+        <!-- Card: Date -->
+        <div class="detail-card reveal">
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="3" y1="10" x2="21" y2="10" />
+            </svg>
+          </div>
+          <div class="detail-label">Дата</div>
+          <div class="detail-value">21 марта 2026</div>
+          <div class="detail-sub">Суббота</div>
+        </div>
+
+        <!-- Card: Time -->
+        <div class="detail-card reveal">
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+              <circle cx="12" cy="12" r="9" />
+              <polyline points="12 7 12 12 15.5 15.5" />
+            </svg>
+          </div>
+          <div class="detail-label">Начало</div>
+          <div class="detail-value">18:00</div>
+          <div class="detail-sub">Приходите вовремя</div>
+        </div>
+
+        <!-- Card: Venue -->
+        <div class="detail-card reveal">
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+              <circle cx="12" cy="9" r="2.5" />
+            </svg>
+          </div>
+          <div class="detail-label">Место</div>
+          <div class="detail-value">Карасики</div>
+          <div class="detail-sub">Арендованная 18 беседка</div>
+        </div>
+
+        <!-- Card: Dress code -->
+        <div class="detail-card reveal">
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+              <path
+                d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.86H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.86l.58-3.57a2 2 0 00-1.34-2.23z" />
+            </svg>
+          </div>
+          <div class="detail-label">Дресс-код</div>
+          <div class="detail-value">Old Money</div>
+          <div class="detail-sub">Классика и элегантность</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────── COUNTDOWN ─────────────────────────────── -->
+  <section id="countdown-section">
+    <div class="countdown-bg-text">XXII</div>
+    <div class="section-container">
+      <div class="section-label reveal" style="color: var(--ivory);">До начала осталось</div>
+      <div class="countdown-grid reveal" id="countdown">
+        <div class="countdown-unit">
+          <div class="countdown-number" id="cd-days">00</div>
+          <div class="countdown-label">дней</div>
+        </div>
+        <div class="countdown-sep">·</div>
+        <div class="countdown-unit">
+          <div class="countdown-number" id="cd-hours">00</div>
+          <div class="countdown-label">часов</div>
+        </div>
+        <div class="countdown-sep">·</div>
+        <div class="countdown-unit">
+          <div class="countdown-number" id="cd-mins">00</div>
+          <div class="countdown-label">минут</div>
+        </div>
+        <div class="countdown-sep">·</div>
+        <div class="countdown-unit">
+          <div class="countdown-number" id="cd-secs">00</div>
+          <div class="countdown-label">секунд</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────── DRESSCODE ─────────────────────────────── -->
+  <section id="dresscode">
+    <div class="section-container narrow">
+      <div class="section-label reveal">Дресс-код</div>
+      <h2 class="section-title reveal">Old Money Evening</h2>
+      <p class="section-body reveal">
+        Вечер выдержан в духе тихой роскоши. Никакой спешки,
+        никакого лишнего блеска — только благородные ткани,
+        нейтральные оттенки и уверенная элегантность.
+      </p>
+
+      <div class="dresscode-palette reveal">
+        <div class="palette-item">
+          <div class="palette-swatch" style="background:#F5F0E8;"></div>
+          <span>Слоновая кость</span>
+        </div>
+        <div class="palette-item">
+          <div class="palette-swatch" style="background:#1B263B;"></div>
+          <span>Темно-синий</span>
+        </div>
+        <div class="palette-item">
+          <div class="palette-swatch" style="background:#8B7355;"></div>
+          <span>Кэмел</span>
+        </div>
+        <div class="palette-item">
+          <div class="palette-swatch" style="background:#D4D0C8;"></div>
+          <span>Светло-серый</span>
+        </div>
+        <div class="palette-item">
+          <div class="palette-swatch" style="background:#2C2C2C;"></div>
+          <span>Антрацит</span>
+        </div>
+      </div>
+
+      <ul class="dresscode-tips reveal">
+        <li>Пиджак, классические брюки или платье-миди</li>
+        <li>Натуральные ткани: шерсть, твид, лён, хлопок</li>
+        <li>Минимум принта — максимум фактуры</li>
+        <li>Аксессуары сдержанные: часы, тонкие цепочки</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────── GIFTS ─────────────────────────────── -->
+  <section id="gifts">
+    <div class="section-container">
+      <div class="section-label reveal">Возможные подарки</div>
+      <h2 class="section-title reveal">Что подарить?</h2>
+
+      <div class="details-grid gifts-grid">
+        <!-- Card: Surprise -->
+        <div class="detail-card reveal">
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+              <path d="M20 12v9H4v-9" />
+              <path d="M22 7H2v5h20V7z" />
+              <path d="M12 22V7" />
+              <path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z" />
+              <path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z" />
+            </svg>
+          </div>
+          <div class="detail-label">На ваш вкус</div>
+          <div class="detail-value" style="font-size:clamp(0.9rem,2vw,1.1rem);">Честно, я хз чё можно мне подарить</div>
+          <div class="detail-sub">решите на своё усмотрение</div>
+        </div>
+
+        <!-- Card: Money -->
+        <div class="detail-card reveal">
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <!-- Stack of bills -->
+              <rect x="3" y="9" width="18" height="11" rx="1.5" />
+              <rect x="1" y="7" width="18" height="11" rx="1.5" />
+              <rect x="5" y="5" width="18" height="11" rx="1.5" />
+              <!-- Coin/dollar detail in centre -->
+              <circle cx="14" cy="10.5" r="2.5" />
+              <line x1="14" y1="8.5" x2="14" y2="12.5" />
+            </svg>
+          </div>
+          <div class="detail-label">Вариант проще</div>
+          <div class="detail-value">Деньги</div>
+          <div class="detail-sub">лечу в Июле в Дагестан ✈️</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────── RSVP ─────────────────────────────── -->
+  <section id="rsvp">
+    <div class="section-container narrow">
+      <div class="section-label reveal">Подтверждение</div>
+      <h2 class="section-title reveal">Вы придёте?</h2>
+      <p class="section-body reveal">
+        Пожалуйста, подтвердите присутствие до <strong>19 марта</strong>,
+        чтобы я успел подготовить всё как следует.
+      </p>
+
+      <form id="rsvp-form" class="rsvp-form reveal" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rsvp-name">Имя</label>
+            <input type="text" id="rsvp-name" name="name" placeholder="Твоё имя" required autocomplete="name" />
+            <span class="form-error" id="err-name"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group form-group--radio">
+            <label class="radio-label">Сможешь прийти?</label>
+            <div class="radio-options">
+              <label class="radio-option" id="radio-yes">
+                <input type="radio" name="attendance" value="yes" required id="att-yes" />
+                <span class="radio-box"></span>
+                <span>Да, буду</span>
+              </label>
+              <label class="radio-option" id="radio-no">
+                <input type="radio" name="attendance" value="no" id="att-no" />
+                <span class="radio-box"></span>
+                <span>Не смогу</span>
+              </label>
+            </div>
+            <span class="form-error" id="err-att"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rsvp-comment">Комментарий (необязательно)</label>
+            <textarea id="rsvp-comment" name="comment" placeholder="Пожелание или вопрос..." rows="3"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="rsvp-submit" id="rsvp-submit">
+          <span class="btn-text">Отправить ответ</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </form>
+
+      <!-- Success state -->
+      <div class="rsvp-success" id="rsvp-success">
+        <div class="success-icon">✦</div>
+        <h3>Получено!</h3>
+        <p id="rsvp-success-msg">Ответ записан, жду на празднике!</p>
+        <button class="mood-btn" id="mood-btn">
+          <span>Поднять настроение? ✨</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────── FOOTER ─────────────────────────────── -->
+  <footer id="footer">
+    <div class="footer-ornament">✦</div>
+    <p class="footer-text">Матвей · XXII · 21.03.2026</p>
+    <p class="footer-sub">С уважением ко времени и к тем, кто рядом</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
